@@ -69,6 +69,6 @@ def detect(image_path):
 
         summary += f"• {name} : {number}\n"
 
-    final_text = summary + "\nDetailed Detection\n\n" + text
+    final_text = "\nConfidence threshold : 30 %\n\n" + summary + "\nDetailed Detection\n\n" + text
 
     return final_text, annotated_image
