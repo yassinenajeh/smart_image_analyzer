@@ -15,11 +15,21 @@ class Interface:
 
         self.window.geometry("1200x750")
 
+        self.window.grid_rowconfigure(0, weight=1)
+
+        self.window.grid_columnconfigure(0, weight=1)
+
+        self.main_frame = ctk.CTkScrollableFrame(self.window, fg_color="transparent")
+
+        self.main_frame.grid(row=0, column=0, sticky="nsew")
+
+        self.main_frame.grid_columnconfigure((0, 1), weight=0)
+
         self.language = "EN"
 
         self.title = ctk.CTkLabel(
         
-            self.window,
+            self.main_frame,
         
             text=TEXTS[self.language]["title"],
         
@@ -29,7 +39,7 @@ class Interface:
 
         self.subtitle = ctk.CTkLabel(
 
-            self.window,
+            self.main_frame,
 
             text=TEXTS[self.language]["sub"],
 
@@ -43,7 +53,7 @@ class Interface:
 
         self.image_label = ctk.CTkLabel(
 
-            self.window,
+            self.main_frame,
 
             text=TEXTS[self.language]["no_image"]
 
@@ -51,7 +61,7 @@ class Interface:
 
         self.annotated_label = ctk.CTkLabel(
         
-            self.window,
+            self.main_frame,
         
             text=""
         
@@ -59,7 +69,7 @@ class Interface:
 
         self.upload_button = ctk.CTkButton(
                 
-            self.window,
+            self.main_frame,
         
             command=self.choose_image,
                 
@@ -69,7 +79,7 @@ class Interface:
 
         self.analyze_button = ctk.CTkButton(
         
-            self.window,
+            self.main_frame,
 
             command=self.analyze_image,
         
@@ -79,7 +89,7 @@ class Interface:
 
         self.result_label = ctk.CTkLabel(
                 
-            self.window,
+            self.main_frame,
                 
             text=TEXTS[self.language]["results"]
                 
@@ -87,7 +97,7 @@ class Interface:
 
         self.lang_button = ctk.CTkButton(
 
-            self.window,
+            self.main_frame,
 
             command=self.lang,
 
@@ -95,9 +105,9 @@ class Interface:
 
         )
 
-        self.title.grid(row=0, column=0, columnspan=2, padx=20)
+        self.title.grid(row=0, column=0, columnspan=2, padx=20, pady=(20,5))
 
-        self.subtitle.grid(row=1, column=0, columnspan=2, padx=20)
+        self.subtitle.grid(row=1, column=0, columnspan=2, padx=20, pady=(0,20))
                 
         self.image_label.grid(row=2, column=0, padx=20, pady=20)
 
