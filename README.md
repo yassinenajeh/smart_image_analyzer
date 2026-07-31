@@ -57,7 +57,7 @@ Smart-Image-Analyzer/
 
 ## ⚙️ Installation
 
-Clone the repository:
+Clone the repository :
 
 ```bash
 git clone https://github.com/yassinenajeh/python_smart_image_analyzer.git
@@ -87,7 +87,7 @@ python main.py
 2. The application sends the image to the YOLOv8 model.
 3. YOLO detects every object present in the image.
 4. The detections are filtered using a confidence threshold.
-5. The application displays:
+5. The application displays :
    - detected objects;
    - confidence scores;
    - number of objects;
