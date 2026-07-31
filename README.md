@@ -11,10 +11,10 @@ It allows users to upload an image, detect objects, display confidence scores, c
 ## 📸 Preview
 
 - **Main interface**
-<img width="403" height="531" alt="Screenshot 1" src="https://github.com/user-attachments/assets/15b10aa9-ba44-4a69-80db-b53801af4d86" />
+<img width="452" height="682" alt="Screenshot 1" src="https://github.com/user-attachments/assets/89d05e21-c554-4f63-8fb5-d68e59d1fc38" />
 
 - **Detection results**
-<img width="822" height="917" alt="Screenshot 2" src="https://github.com/user-attachments/assets/f1c9ed8b-1c7d-4d53-875c-02279d4871ce" />
+<img width="798" height="1020" alt="Screenshot 2" src="https://github.com/user-attachments/assets/8050bae6-6f41-4afa-ba87-aba590886521" />
 
 - **Annotated image**
 <img width="360" height="359" alt="Screenshot 3" src="https://github.com/user-attachments/assets/f9e74d24-4073-40be-ab7f-3b1313a7a865" />
