@@ -31,7 +31,7 @@ def detect(image_path):
 
         name = model.names[class_id]
 
-        if confidence > 70:
+        if confidence > 30:
 
             text += f"{name} ({confidence:.1f}%)\n"
 
