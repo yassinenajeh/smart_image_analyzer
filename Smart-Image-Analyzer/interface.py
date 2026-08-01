@@ -27,6 +27,8 @@ class Interface:
 
         self.language = "EN"
 
+        self.has_result = False
+
         self.title = ctk.CTkLabel(
         
             self.main_frame,
@@ -202,6 +204,8 @@ class Interface:
 
         except Exception as error:
 
+            self.has_result = False
+
             self.result_label.configure(
             
                 text=f'{TEXTS[self.language]["error"]} : {error}'
@@ -209,6 +213,8 @@ class Interface:
             )
 
             return
+
+        self.has_result = True
 
         self.result_label.configure(
 
@@ -269,11 +275,13 @@ class Interface:
 
         )
 
-        self.result_label.configure(
-        
-            text=TEXTS[self.language]["results"]
-        
-        )
+        if not self.has_result:
+
+            self.result_label.configure(
+            
+                text=TEXTS[self.language]["results"]
+
+            )
 
         self.upload_button.configure(
 
