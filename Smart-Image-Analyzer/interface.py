@@ -27,7 +27,7 @@ class Interface:
 
         self.language = "EN"
 
-        self.has_result = False
+        self.has_output = False
 
         self.title = ctk.CTkLabel(
         
@@ -204,17 +204,17 @@ class Interface:
 
         except Exception as error:
 
-            self.has_result = False
-
             self.result_label.configure(
             
                 text=f'{TEXTS[self.language]["error"]} : {error}'
             
             )
 
+            self.has_output = True
+
             return
 
-        self.has_result = True
+        self.has_output = True
 
         self.result_label.configure(
 
@@ -275,7 +275,7 @@ class Interface:
 
         )
 
-        if not self.has_result:
+        if not self.has_output :
 
             self.result_label.configure(
             
